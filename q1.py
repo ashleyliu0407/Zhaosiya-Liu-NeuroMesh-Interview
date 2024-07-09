@@ -1,23 +1,23 @@
 def minSub(input, target):
     count = 0
-    index = 0
+    target_index = 0
     
-    while index < len(target):
-        index = 0
-        start_index = index 
+    while target_index < len(target):
+        source_index = 0
+        start_target_index = target_index 
         
-        while index < len(input) and index < len(target):
-            if input[index] == target[index]:
-                index += 1
-            index += 1
+        while source_index < len(input) and target_index < len(target):
+            if input[source_index] == target[target_index]:
+                target_index += 1
+            source_index += 1
         
-        if index == start_index:
+        if target_index == start_target_index:
             return -1
         
-        count += 1 
+        count += 1  
     
     return count
 
 print(minSub("abc", "abcbc")) 
-print(minSub("abc", "acdbc"))
+print(minSub("abc", "acdbc"))  
 print(minSub("xyz", "xzyxz")) 
