@@ -1,17 +1,17 @@
-def minSub(source, target):
+def minSub(input, target):
     count = 0
-    target_index = 0
+    index = 0
     
-    while target_index < len(target):
-        source_index = 0
-        start_target_index = target_index 
+    while index < len(target):
+        index = 0
+        start_index = index 
         
-        while source_index < len(source) and target_index < len(target):
-            if source[source_index] == target[target_index]:
-                target_index += 1
-            source_index += 1
+        while index < len(input) and index < len(target):
+            if input[index] == target[index]:
+                index += 1
+            index += 1
         
-        if target_index == start_target_index:
+        if index == start_index:
             return -1
         
         count += 1 
